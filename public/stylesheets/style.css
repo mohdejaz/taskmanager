@@ -1,0 +1,52 @@
+body {
+  padding-left: 100px;
+  padding-right: 100px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  font-size: xx-large;
+  width: 100%;
+  margin: 2px auto;
+  padding: 5px auto;
+}
+
+.center {
+  width: 100%;
+  margin: 10px auto;
+  text-align: center;
+}
+
+a {
+  color: #00B7FF;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-decoration: none;
+}
+
+table {
+  margin-top: 5px;
+	border-collapse: collapse;
+  width: 100%;
+}
+
+table td {
+	padding: 7px;
+  text-align: left;
+}
+
+table th {
+	padding: 7px;
+  text-align: left;
+}
+
+.id {
+	width: 50px;
+  text-align: left;
+}
+
+.rundate {
+	width: 75px;
+  text-align: left;
+}
+
