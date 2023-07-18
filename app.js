@@ -8,7 +8,7 @@ var session = require('express-session')
 const crypto = require('crypto');
 
 var indexRouter = require('./routes/index');
-var backlogRouter = require('./routes/backlog');
+// var backlogRouter = require('./routes/backlog');
 
 var app = express();
 
@@ -33,7 +33,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.all('/', indexRouter);
-app.all('/backlog', backlogRouter);
+// app.all('/backlog', backlogRouter);
 
 // abort=Abort&carryover=&selected=1&selected=4
 

@@ -18,7 +18,7 @@ h1 {
 }
 
 a {
-  color: #00B7FF;
+  color: darkblue;
   padding-left: 10px;
   padding-right: 10px;
   text-decoration: none;
@@ -40,13 +40,13 @@ table th {
   text-align: left;
 }
 
-.id {
-	width: 50px;
+.small {
+	width: 60px;
   text-align: left;
 }
 
-.rundate {
-	width: 75px;
+.medium {
+	width: 80px;
   text-align: left;
 }
 
