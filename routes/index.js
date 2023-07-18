@@ -10,7 +10,7 @@ let getHandler = async function (req, res, next) {
     req.session.views = 1;
   }
 
-  // console.log('views: ' + req.session.views);
+  console.log('views: ' + req.session.views);
 
   let tasks = [];
   // let dateFmt = dateUtil.formatDate(new Date(),'yyyy-MM-dd');
