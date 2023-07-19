@@ -1,0 +1,25 @@
+<form action="/tasks" method="POST">
+    <input type="text"   id="task"   name="task" size="80"></input>
+    <input type="submit" id="done"   name="done" value="Done"></input>
+    <input type="submit" id="abort"  name="abort" value="Abort"></input>
+    <input type="submit" id="delete" name="delete" value="Delete"></input>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th class="small">ID</th>
+                <th class="small">Group</th>
+                <th>Title</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each tasks}}
+            <tr>
+                <td class="small"><input type="checkbox" name="selected" value="{{id}}">&nbsp;{{id}}</input></td>
+                <td class="small">{{group}}</td>
+                <td>{{title}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</form>
