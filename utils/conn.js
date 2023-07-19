@@ -1,7 +1,11 @@
 const pg = require('pg');
-// 8435 - dev
-// 5435 - prod
-const dbclient = new pg.Client({ user: 'sa', password: 'sa', host: 'localhost', database: 'tasks', port: 8435 });
+
+const dbhost    = process.env.DBHOST || "localhost";
+const dbname    = process.env.DBNAME || "tasks";
+const dbport    = process.env.DBPORT || 5435;
+const dbuser    = process.env.DBUSER || "sa";
+const dbpass    = process.env.DBPASS || "sa";
+const dbclient  = new pg.Client({ user: dbuser, password: dbpass, host: dbhost, database: dbname, port: dbport });
 
 console.log("Connecting to db --");
 
