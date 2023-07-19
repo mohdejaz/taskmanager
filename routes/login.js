@@ -7,7 +7,7 @@ let getHandler = async function (req, res, next) {
 };
 
 let postHandler = async function (req, res, next) {
-  console.log("Inside post --" + JSON.stringify(req.body));
+  // console.log("Inside post --" + JSON.stringify(req.body));
   let flag = false;
   if (req.body.login && req.body.password) {
     console.log("Authenticate user --");
