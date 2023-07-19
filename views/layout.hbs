@@ -8,7 +8,9 @@
     <div class="center">
       {{!-- <h1><a style="border-right: 1px solid grey" href="/">Tasks</a><a href="/backlog">Backlog</a></h1> --}}
       <h1>Task Manager</h1>
-      <hr/>
+      {{#if user}}
+      <h2>{{user}}&nbsp;(<a class="signout" href="/logout">logoff</a>)</h2>
+      {{/if}}
       {{{body}}}
     </div>
   </body>

@@ -7,21 +7,37 @@ body {
 h1 {
   font-size: xx-large;
   width: 100%;
-  margin: 2px auto;
-  padding: 5px auto;
+  margin: 10px auto;
+  padding: 7px auto;
+  padding-bottom: 5px;
+  border-bottom: 1px solid lightgray;
+}
+
+h2 {
+  font-size: medium;
+  width: 100%;
+  margin: 10px auto;
+  padding: 7px auto;
+  padding-bottom: 5px;
+  text-align: right;
+  border-bottom: 1px solid lightgray;
+}
+
+h2.error {
+  font-size: smaller;
+  width: 100%;
+  margin: 10px auto;
+  padding: 10px auto;
+  padding-bottom: 5px;
+  text-align: center;
+  color: red;
+  border-bottom: 1px solid lightgray;
 }
 
 .center {
   width: 100%;
   margin: 10px auto;
   text-align: center;
-}
-
-a {
-  color: darkblue;
-  padding-left: 10px;
-  padding-right: 10px;
-  text-decoration: none;
 }
 
 table {
@@ -48,5 +64,21 @@ table th {
 .medium {
 	width: 80px;
   text-align: left;
+}
+
+div.label {
+  padding: 3px;
+  padding-right: 3px;
+  width: 150px;
+  max-width: 150px;
+  display: inline-block;
+  margin: 3px;
+  /* background-color: lightgray; */
+  text-align: right;
+}
+
+a.signout {
+  font-size: smaller;
+  text-decoration: none;
 }
 

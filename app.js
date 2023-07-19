@@ -2,13 +2,15 @@ var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
-var cookieSession = require('cookie-session');
 var logger = require('morgan');
 var session = require('express-session')
 const crypto = require('crypto');
 
 var indexRouter = require('./routes/index');
-// var backlogRouter = require('./routes/backlog');
+var tasksRouter = require('./routes/tasks');
+var signupRouter = require('./routes/signup');
+var loginRouter = require('./routes/login');
+var logoutRouter = require('./routes/logout');
 
 var app = express();
 
@@ -32,10 +34,19 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.all('/', indexRouter);
-// app.all('/backlog', backlogRouter);
+function checkSignIn(req, res, next){
+  if(req.session.user){
+     next();     //If session exists, proceed to page
+  } else {
+    res.redirect("/login");
+  }
+}
 
-// abort=Abort&carryover=&selected=1&selected=4
+app.all('/', indexRouter);
+app.all('/login', loginRouter);
+app.all('/signup', signupRouter);
+app.all('/logout', logoutRouter);
+app.all('/tasks', checkSignIn, tasksRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
