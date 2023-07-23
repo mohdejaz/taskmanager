@@ -15,8 +15,8 @@
         <tbody>
             {{#each tasks}}
             <tr>
-                <td class="small"><input type="checkbox" name="selected" value="{{id}}">&nbsp;{{id}}</input></td>
-                <td class="small">{{group}}</td>
+                <td class="small"><input type="checkbox" name="selected" value="{{id}}">&nbsp;<a href="/edit/{{id}}">Edit</a></input></td>
+                <td class="medium">{{group}}</td>
                 <td>{{title}}</td>
             </tr>
             {{/each}}

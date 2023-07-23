@@ -11,6 +11,7 @@ var tasksRouter = require('./routes/tasks');
 var signupRouter = require('./routes/signup');
 var loginRouter = require('./routes/login');
 var logoutRouter = require('./routes/logout');
+var taskEditRouter = require('./routes/edit');
 
 var app = express();
 
@@ -47,6 +48,7 @@ app.all('/login', loginRouter);
 app.all('/signup', signupRouter);
 app.all('/logout', logoutRouter);
 app.all('/tasks', checkSignIn, tasksRouter);
+app.all('/edit/*', checkSignIn, taskEditRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
