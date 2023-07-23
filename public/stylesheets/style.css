@@ -62,7 +62,7 @@ table th {
 }
 
 .medium {
-	width: 80px;
+	width: 120px;
   text-align: left;
 }
 
@@ -82,3 +82,23 @@ a.signout {
   text-decoration: none;
 }
 
+input {
+  padding: 5px;
+  margin: 5px;
+}
+
+select {
+  padding: 5px;
+  margin: 5px;
+}
+
+label {
+  padding: 5px;
+  margin: 5px;
+  width: 150px;
+  max-width: 150px;
+}
+
+div.container {
+  text-align: left;
+}

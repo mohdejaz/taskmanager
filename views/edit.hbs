@@ -1,0 +1,28 @@
+<script>
+    function onSelectGroup(grp) {
+        var groups = document.getElementById("groups");
+        document.getElementById("group").value = groups.options[groups.selectedIndex].text;
+    }
+</script>
+<form action="/edit/{{id}}" method="POST">
+    <div class="container">
+    {{#each tasks}}
+    <div>
+        <div class="label">Title:</div>
+        <input type="text" placeholder="Title" id="title" value="{{title}}" name="title" size="80"></input>
+    </div>
+    <div>
+        <div class="label">Group:</div>
+        <input type="group" placeholder="Group" id="group" name="group" value="{{group}}"  size="40"></input>
+        <select id="groups" name="groups" onchange="onSelectGroup()">
+        {{#each groups}}
+            <option value="{{id}}">{{title}}</option>
+        {{/each}}
+        </select>     
+    </div>
+    {{/each}}
+    <div>
+        <div class="label"></div>
+        <input type="submit" id="save" name="save" value="Save"></input>
+    </div>
+</form>
